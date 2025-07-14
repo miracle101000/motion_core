@@ -224,10 +224,6 @@ The stream provides `MotionData` objects, which contain the following properties
 | `roll`             | `double`      | A convenience getter for the roll angle (in radians) from the attitude.        |
 | `yaw`              | `double`      | A convenience getter for the yaw angle (in radians) from the attitude.         |
 
-## Contributing
-
-Contributions are welcome! If you find a bug or have a feature request, please open an issue on the [GitHub repository](https://github.com/your-repo-link).
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
