@@ -1,6 +1,6 @@
 name: motion_core
 description: "A high-performance Flutter plugin that provides a simple, unified stream of fused device motion data, abstracting native APIs like iOS Core Motion and Android's Rotation Vector sensor."
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/miracle101000/motion_core
 
 environment:
