@@ -59,6 +59,10 @@ This plugin requires platform-specific configuration to access motion data.
 
 ### iOS (Mandatory)
 
+`motion_core` supports both Swift Package Manager and CocoaPods. Flutter selects
+the configured package manager for the consuming application automatically. The
+minimum supported versions are Flutter 3.41, Dart 3.11, and iOS 13.0.
+
 You **must** add a usage description to your `ios/Runner/Info.plist` file. Without this, your app will crash on recent iOS versions when trying to access motion data and will be rejected by the App Store.
 
 Open `ios/Runner/Info.plist` and add the following:

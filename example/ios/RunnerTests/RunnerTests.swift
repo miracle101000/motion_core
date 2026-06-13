@@ -11,14 +11,14 @@ import XCTest
 
 class RunnerTests: XCTestCase {
 
-  func testGetPlatformVersion() {
+  func testIsAvailableReturnsBoolean() {
     let plugin = MotionCorePlugin()
 
-    let call = FlutterMethodCall(methodName: "getPlatformVersion", arguments: [])
+    let call = FlutterMethodCall(methodName: "isAvailable", arguments: nil)
 
     let resultExpectation = expectation(description: "result block must be called.")
     plugin.handle(call) { result in
-      XCTAssertEqual(result as! String, "iOS " + UIDevice.current.systemVersion)
+      XCTAssertTrue(result is Bool)
       resultExpectation.fulfill()
     }
     waitForExpectations(timeout: 1)

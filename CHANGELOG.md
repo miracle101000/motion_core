@@ -1,3 +1,8 @@
+## Unreleased
+
+* Added Swift Package Manager support for iOS while retaining CocoaPods compatibility.
+* Raised the minimum supported versions to Flutter 3.41, Dart 3.11, and iOS 13.0.
+
 ## 0.0.1
 
 * Initial release.
