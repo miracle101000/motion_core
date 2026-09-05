@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'motion_core'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Unified fused device-motion stream for Flutter, backed by Core Motion.'
   s.description      = <<-DESC
 A Flutter plugin that exposes iOS Core Motion (CMDeviceMotion) and Android sensor

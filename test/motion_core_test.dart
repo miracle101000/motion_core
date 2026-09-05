@@ -79,6 +79,14 @@ void main() {
       expect(data.magneticField, isNull);
     });
 
+    test('treats a zero heading accuracy as unavailable', () {
+      // Some Android devices report 0 instead of -1 when not estimated.
+      final data = MotionData.fromList(
+        payloadFor(Quaternion.identity(), headingAccuracy: 0),
+      );
+      expect(data.headingAccuracy, isNull);
+    });
+
     test('accepts the legacy 11-element payload', () {
       final data = MotionData.fromList(
         const [0, 0, 0, 1, 0, 0, 9.81, 0, 0, 0, -1],

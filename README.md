@@ -202,7 +202,7 @@ These are identical on both platforms.
 | `rotationRate` | `Vector3?` | Bias-corrected angular velocity in rad/s. `null` only on Android devices without a gyroscope. |
 | `magneticField` | `CalibratedMagneticField?` | Field in µT plus `MagneticFieldCalibrationAccuracy` (`uncalibrated`, `low`, `medium`, `high`). `null` for arbitrary frames or without a magnetometer. |
 | `heading` | `double?` | Compass heading in degrees `[0, 360)`. `null` for arbitrary frames. |
-| `headingAccuracy` | `double?` | **Android only.** Estimated heading accuracy in radians (smaller is better). `null` on iOS. |
+| `headingAccuracy` | `double?` | **Android only.** Estimated heading accuracy in radians (smaller is better). `null` on iOS and on devices that do not estimate it. |
 | `referenceFrame` | `AttitudeReferenceFrame` | The frame actually in use for this sample. |
 | `timestamp` | `double` | Seconds since boot (monotonic). Use differences between samples. |
 | `pitch`, `roll`, `yaw` | `double` | Euler angles in radians, see [Conventions](#conventions). |

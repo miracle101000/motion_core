@@ -151,7 +151,7 @@ class MotionData {
   /// [0..3]   attitude quaternion x, y, z, w
   /// [4..6]   gravity x, y, z                (m/s²)
   /// [7..9]   user acceleration x, y, z      (m/s²)
-  /// [10]     heading accuracy (radians, < 0 when unavailable)
+  /// [10]     heading accuracy (radians, <= 0 when unavailable)
   /// [11..13] rotation rate x, y, z          (rad/s, NaN when unavailable)
   /// [14..16] magnetic field x, y, z         (µT, NaN when unavailable)
   /// [17]     magnetic field calibration accuracy (-1, 0, 1, 2)
@@ -182,8 +182,9 @@ class MotionData {
       attitude: Quaternion(data[0], data[1], data[2], data[3]),
       gravity: Vector3(data[4], data[5], data[6]),
       userAcceleration: Vector3(data[7], data[8], data[9]),
-      headingAccuracy:
-          headingAccuracy.isNaN || headingAccuracy < 0 ? null : headingAccuracy,
+      // Some devices report 0 instead of -1 when they do not estimate it; an
+      // accuracy of exactly zero radians is not a real estimate.
+      headingAccuracy: headingAccuracy > 0 ? headingAccuracy : null,
       rotationRate: rx.isNaN || ry.isNaN || rz.isNaN ? null : Vector3(rx, ry, rz),
       magneticField: mx.isNaN || my.isNaN || mz.isNaN
           ? null
@@ -223,7 +224,8 @@ class MotionData {
   /// Estimated accuracy of the heading in radians (smaller is better).
   ///
   /// Android only (`TYPE_ROTATION_VECTOR` `values[4]`), and only for
-  /// north-referenced frames. `null` on iOS and when unavailable.
+  /// north-referenced frames. `null` on iOS and when unavailable, including
+  /// devices that report `0` because they do not estimate it.
   final double? headingAccuracy;
 
   /// The reference frame actually in use for this sample. May differ from

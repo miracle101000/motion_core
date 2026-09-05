@@ -1,3 +1,9 @@
+## 0.1.1
+
+* `MotionData.headingAccuracy` is `null` when the device reports `0` for the
+  rotation vector's heading accuracy (some Android devices without a
+  gyroscope do this instead of `-1`). Zero radians is not a real estimate.
+
 ## 0.1.0
 
 Bug-fix and feature-parity release. The native payload changed, so upgrade the
