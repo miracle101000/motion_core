@@ -1,3 +1,15 @@
+## 0.2.0
+
+* Migrates to built-in Kotlin: the Android build no longer applies the Kotlin
+  Gradle Plugin (`kotlin-android`), so apps on Android Gradle Plugin 9 build
+  without the "plugins that apply KGP" warning and keep building when Flutter
+  removes its temporary KGP compatibility.
+* Updates the minimum supported SDK version to Flutter 3.44 / Dart 3.12
+  (required for the built-in Kotlin migration).
+* Android build now targets Java 17 (already required by AGP 8+).
+* Example app migrated to AGP 9.0.1 / Gradle 9.1 per the app migration guide
+  (`android.builtInKotlin` stays `false` until Flutter 3.47, as Flutter requires).
+
 ## 0.1.1
 
 * `MotionData.headingAccuracy` is `null` when the device reports `0` for the

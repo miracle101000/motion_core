@@ -65,6 +65,7 @@ flutter pub get
 ### Android
 
 *   Minimum API 21. **No permissions are required.**
+*   Requires Flutter 3.44 or newer. The plugin does not apply the Kotlin Gradle Plugin, so it is ready for Android Gradle Plugin 9's built-in Kotlin (see Flutter's [migration guide](https://docs.flutter.dev/release/breaking-changes/migrate-to-built-in-kotlin/for-app-developers)).
 *   Requesting more than 200 Hz on Android 12+ requires the `HIGH_SAMPLING_RATE_SENSORS` permission; otherwise the system silently caps the rate.
 
 ## Usage
