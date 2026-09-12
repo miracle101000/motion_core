@@ -9,6 +9,26 @@ A Flutter plugin that provides a simple, high-performance, and unified stream of
 
 ---
 
+## Table of Contents
+
+- [Overview](#overview)
+  - [Features](#features)
+- [Getting Started](#getting-started)
+- [Platform Specific Setup](#platform-specific-setup)
+  - [iOS](#ios)
+  - [Android](#android)
+- [Usage](#usage)
+  - [Managing the Stream](#managing-the-stream)
+  - [Configuration](#configuration)
+- [Conventions](#conventions)
+- [API Details](#api-details)
+  - [`MotionData`](#motiondata)
+  - [`MotionCore`](#motioncore)
+  - [Platform mapping](#platform-mapping)
+- [Migrating from 0.0.x](#migrating-from-00x)
+- [License](#license)
+- [Author](#author)
+
 ## Overview
 
 While Flutter provides access to raw sensors (via plugins like `sensors_plus`), there is no out-of-the-box equivalent to **iOS Core Motion** or **Android's fused sensor APIs**. To get a device's true orientation (attitude), developers typically need to implement complex sensor fusion algorithms (like Madgwick or Mahony filters) in Dart or build a native bridge.
