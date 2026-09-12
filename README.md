@@ -243,3 +243,7 @@ These are identical on both platforms.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+Built by **Miracle Okolo** · [LinkedIn](https://www.linkedin.com/in/miracle-okolo-bb2133183/) · [GitHub](https://github.com/miracle101000)
