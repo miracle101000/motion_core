@@ -1,5 +1,5 @@
 group = "com.example.motion_core"
-version = "0.2.0"
+version = "0.2.1"
 
 buildscript {
     // Kept on the classpath so Flutter's Gradle plugin can apply the Kotlin

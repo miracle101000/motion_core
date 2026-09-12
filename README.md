@@ -58,7 +58,7 @@ While Flutter provides access to raw sensors (via plugins like `sensors_plus`), 
 dependencies:
   flutter:
     sdk: flutter
-  motion_core: ^0.1.0
+  motion_core: ^0.2.1
   vector_math: ^2.1.4   # for Quaternion / Vector3
 ```
 

@@ -1,3 +1,7 @@
+## 0.2.1
+
+* README: table of contents and author section. No code changes.
+
 ## 0.2.0
 
 * Migrates to built-in Kotlin: the Android build no longer applies the Kotlin
